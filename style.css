@@ -1,3 +1,203 @@
-*{
-    box-sizing: border-box;
+/* All */
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --third-color: #7a7a7a;
+  --fourth-color: #272429;
+  --header-color: #373640;
+  --color-p: #afafaf;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red;*/
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+h1 {
+  color: white;
+  margin-bottom: 2em;
+  margin-top: 50px;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  margin-left: 1em;
+  font-size: 1rem;
+}
+
+p {
+  color: var(--color-p);
+  margin-left: 1em;
+  margin-top: 2em;
+  font-size: 3px;
+}
+
+/* Header */
+
+/* burger */
+/* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: black;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: yellow;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+/* Icon Burger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--header-color);
+  align-items: center;
+  margin-bottom: 3em;
+  height: 5em;
+}
+
+.logo {
+  order: 2;
+  width: 6em;
+  height: 3.5em;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 3em;
+  padding: 8px 35px;
+  cursor: pointer;
+}
+
+.toon {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  order: 3;
+}
+/*  Banniere */
+.banner {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+/* Section presentation */
+.description {
+  margin: auto;
+  padding-bottom: 4em;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* Section Contenue */
+.wrapper-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-img {
+  height: 30vw;
+  border-radius: 8px;
+  margin-bottom: 2em;
+  display: inline-block;
+  overflow: hidden;
+  flex: 0.3 0 20vw;
+}
+
+.content {
+  flex: 0.7 1 30vw;
+}
+
+.card {
+  display: flex;
+  margin-bottom: 1em;
+  border-bottom: 2px solid gray;
+}
+
+.card p {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+/* Footer */
+
+footer h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 1.5rem;
+  margin-left: 0;
+  margin-top: 2em;
+}
+
+footer li {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  margin: 2em 0 0 0;
+}
+
+footer {
+  background-color: var(--fourth-color);
+}
+
+@media screen and (min-width: 480px) {
 }
