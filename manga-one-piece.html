@@ -2,39 +2,55 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="flag-38938.png" type="image/png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Manga-Zone</title>
   </head>
+
   <body>
     <header>
-      <div>
+      <nav id="mySidenav" class="sidenav">
+        <a id="closeBtn" class="close">&times;</a>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="manga-one-piece.html">One Piece</a></li>
+          <li><a href="manga-bleach.html">Bleach</a></li>
+          <li><a href="manga-naruto.html">Naruto</a></li>
+        </ul>
+      </nav>
+
+      <a id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+
+      <div class="logo">
         <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#373640" class="fond-logo" d="m0 0h900v600h-900z" />
           <path
-            class="trait-logo"
             d="m406.81 92-42.812 27.812v0.59375l42.688 27.719-38.688 25.125v55.969l82-53.219 191 124-50 32.438v56.031l93.125-60.469 43.031 27.938 42.844-27.844v-0.1875l-42.875-27.812 0.125-0.09375-0.125-0.09375 42.875-27.812v-0.375l-42.719-27.75-43.156 28.031-190.81-123.88 42.688-27.719v-0.59375l-42.812-27.812h-0.0625l-43.125 28-43.125-28h-0.0625zm-48.812 87.719-142.12 92.281-43.156-28.031-42.719 27.75v0.375l42.875 27.812-0.125 0.09375 0.125 0.09375-42.875 27.812v0.1875l42.844 27.844 43.031-27.938 234.12 152 131-85.062v-121.16l-39-25.344v115.84l-92 59.719-191-124 54-35.062v58.094l45 29.219v-172.53zm69 23.281v29h-54v41h54v97h45v-97h54v-41h-54v-29h-45zm-54 91v61h32v-61h-32zm121 0v61h32v-61h-32z"
             fill="white"
           />
         </svg>
       </div>
-      <nav>
-        <ul>
-          <li>One Piece</li>
-          <li>Bleach</li>
-          <li>Naruto</li>
-        </ul>
-      </nav>
-      <img src="" alt="tete-toon" sizes="" />
+
+      <img
+        class="toon"
+        src="assets/tete-moi-toon.jpg"
+        alt="tete-toon"
+        sizes=""
+      />
     </header>
     <main>
       <figure>
-        <img src="assets/Bannière.jpg" alt="Banniere" sizes="" />
+        <img class="banner" src="assets/Bannière.jpg" alt="Banniere" sizes="" />
       </figure>
       <section class="Presentation">
-        <h1>Bienvenue sur Manga-Zone</h1>
+        <h1>One Piece</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
           at quos molestiae accusantium rem fugit obcaecati beatae ratione
@@ -45,7 +61,7 @@
       </section>
       <section class="contenue">
         <article>
-          <h1>Qu'est ce que ça raconte</h1>
+          <h2>Qu'est ce que ça raconte</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
             at quos molestiae accusantium rem fugit obcaecati beatae ratione
@@ -53,16 +69,18 @@
             fuga cum nemo repudiandae a laborum. Unde reprehenderit architecto,
             dolor repellendus aliquam sint omnis repellat?
           </p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/KV83AZzEk6Y"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <h1>Pourquoi c'est bien ?</h1>
+          <div class="yt">
+            <iframe
+              width="1190"
+              height="669"
+              src="https://www.youtube.com/embed/WBB-otA1lmY"
+              title="ONE PIECE - MENU MANGA #44"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h2>Pourquoi c'est bien ?</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
             at quos molestiae accusantium rem fugit obcaecati beatae ratione
@@ -108,15 +126,16 @@
       </section>
     </main>
     <footer>
-      <h1>Liens Utile</h1>
+      <h2>Liens Utile</h2>
       <ul>
         <li>
-          <a href=""></a>
-          <a href=""></a>
-          <a href=""></a>
+          <a href="">LeChefOtaku</a>
+          <a href="">SensCritique</a>
+          <a href="">Wikipedia</a>
         </li>
       </ul>
       <p class="copyright">© 2022 Jujubis</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

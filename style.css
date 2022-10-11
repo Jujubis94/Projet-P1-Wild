@@ -35,7 +35,7 @@ p {
   color: var(--color-p);
   margin-left: 1em;
   margin-top: 2em;
-  font-size: 3px;
+  font-size: 1rem;
 }
 
 /* Header */
@@ -68,6 +68,7 @@ p {
   color: white;
   display: block;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .sidenav a:hover {
@@ -181,6 +182,7 @@ footer h2 {
 footer li {
   display: flex;
   justify-content: space-around;
+  padding-right: 25px;
 }
 
 footer li a {
@@ -197,6 +199,26 @@ footer li a {
 
 footer {
   background-color: var(--fourth-color);
+}
+
+/* page manga */
+.yt {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin: 0 auto;
+  object-fit: cover;
+}
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 @media screen and (min-width: 480px) {
