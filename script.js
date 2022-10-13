@@ -14,3 +14,4 @@ function openNav() {
 function closeNav() {
   sidenav.classList.remove("active");
 }
+

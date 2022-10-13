@@ -6,6 +6,9 @@
   --fourth-color: #272429;
   --header-color: #373640;
   --color-p: #afafaf;
+  --color-red: #ff3823;
+  --color-or: #fec63d;
+  --color-cyan: #4dd7fa;
 }
 * {
   box-sizing: border-box;
@@ -20,121 +23,34 @@ body {
 
 h1 {
   color: white;
-  margin-bottom: 2em;
-  margin-top: 50px;
+  margin-bottom: 2rem;
+  margin-top: 3.125rem;
   text-align: center;
 }
 
 h2 {
   color: white;
-  margin-left: 1em;
+  margin-left: 1rem;
   font-size: 1rem;
 }
 
 p {
   color: var(--color-p);
-  margin-left: 1em;
+  margin-left: 1rem;
   margin-top: 2em;
   font-size: 1rem;
-}
-
-/* Header */
-
-/* burger */
-/* Sidenav menu */
-.sidenav {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: -250px;
-  background-color: black;
-  padding-top: 60px;
-  transition: left 0.5s ease;
-}
-
-.sidenav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Sidenav menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.sidenav a:hover {
-  color: yellow;
-}
-
-/* Active class */
-.sidenav.active {
-  left: 0;
-}
-
-/* Close btn */
-.sidenav .close {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-}
-/* Icon Burger */
-.burger-icon span {
-  display: block;
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--header-color);
-  align-items: center;
-  margin-bottom: 3em;
-  height: 5em;
-}
-
-.logo {
-  order: 2;
-  width: 6em;
-  height: 3.5em;
-}
-
-nav ul li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 3em;
-  padding: 8px 35px;
-  cursor: pointer;
-}
-
-.toon {
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 50%;
-  order: 3;
 }
 /*  Banniere */
 .banner {
   width: 100%;
   height: auto;
-  border-radius: 1em;
+  border-radius: 1rem;
 }
+
 /* Section presentation */
 .description {
   margin: auto;
-  padding-bottom: 4em;
+  padding-bottom: 4rem;
   text-align: left;
   font-size: 1rem;
 }
@@ -148,7 +64,6 @@ nav ul li {
 .wrapper-img {
   height: 30vw;
   border-radius: 8px;
-  margin-bottom: 2em;
   display: inline-block;
   overflow: hidden;
   flex: 0.3 0 20vw;
@@ -160,66 +75,89 @@ nav ul li {
 
 .card {
   display: flex;
-  margin-bottom: 1em;
-  border-bottom: 2px solid gray;
+  margin-bottom: 1rem;
+  /*border-bottom: 2px solid gray;*/
 }
 
 .card p {
   text-align: left;
   font-size: 1rem;
-  margin-bottom: 1em;
-}
-/* Footer */
-
-footer h2 {
-  text-align: center;
-  margin-bottom: 2em;
-  font-size: 1.5rem;
-  margin-left: 0;
-  margin-top: 2em;
+  margin-bottom: 1rem;
 }
 
-footer li {
-  display: flex;
-  justify-content: space-around;
-  padding-right: 25px;
+.border-separator {
+  width: 80%;
+  margin: 1rem auto;
+  border-top: 1px solid var(--third-color);
 }
 
-footer li a {
-  text-decoration: none;
-  color: white;
-}
+@media screen and (min-width: 576px) {
 
-.copyright {
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-  margin: 2em 0 0 0;
-}
+  .banner {
+    border-radius: 4rem;
+  }
 
-footer {
-  background-color: var(--fourth-color);
-}
+  .border-separator {
+    display: none;
+  }
+  .cards {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    background-color: var(--fourth-color);
+    border-radius: 10px;
+    width: 24vw;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid red;
+    
+  }
 
-/* page manga */
-.yt {
-  position: relative;
-  width: 90%;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  margin: 0 auto;
-  object-fit: cover;
-}
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+  .card:hover{
+    transition:  0.3s ease-in ;
+    transform:  scale(1.10);
+    cursor: pointer;
+  }
 
-@media screen and (min-width: 480px) {
+  .card {
+    border: 2px solid var(--color-red);
+  }
+
+  .content {
+    flex: initial;
+    padding: 2rem 1.5rem;
+  }
+
+  .content h2 {
+    margin: 10px 0;
+    text-align: center;
+    color: var(--secondary-color);
+    border-radius: 18px;
+    background-color: var(--third-color);
+    margin-bottom: 2rem;
+    padding: 0.2rem 0;
+    font-size: 22px;
+  }
+
+  .content p {
+    border-radius: 10px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+  }
+  .wrapper-img {
+    border-radius: 8px 8px 0% 0%;
+  }
+  .bloc-page{
+    width: 80%;
+    margin: 0 auto;
+  }
 }
