@@ -10,6 +10,7 @@
   --color-cyan: #4dd7fa;
 }
 
+
 /*  Banniere */
 .banner {
   display: none;
@@ -104,6 +105,7 @@ iframe {
 .card-body {
   padding: 10px 20px;
 }
+
 .card-body h2 {
   margin: 10px 0;
   text-align: center;
@@ -129,6 +131,10 @@ footer h2 {
   margin-top: 0;
 }
 
+.tns-horizontal.tns-subpixel>.tns-item{
+  display: flex;
+  justify-content: center;
+}
 @media screen and (min-width: 576px) {
   header {
     position: sticky;
@@ -140,5 +146,10 @@ footer h2 {
     margin: auto;
     border-left: 5px solid var(--fourth-color);
     border-right: 5px solid var(--fourth-color);
+  }
+
+  .swiper-slide{
+    height: 400px;
+    background-color: #fec63d;
   }
 }

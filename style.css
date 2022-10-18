@@ -17,6 +17,7 @@
   /* border: 1px solid red;*/
 }
 
+
 body {
   background-color: var(--primary-color);
 }
@@ -106,6 +107,7 @@ p {
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .card {
     background-color: var(--fourth-color);
     border-radius: 10px;
@@ -114,8 +116,6 @@ p {
     display: flex;
     flex-direction: column;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border: 2px solid red;
-    
   }
 
   .card:hover{
@@ -124,9 +124,6 @@ p {
     cursor: pointer;
   }
 
-  .card {
-    border: 2px solid var(--color-red);
-  }
 
   .content {
     flex: initial;
@@ -159,5 +156,14 @@ p {
   .bloc-page{
     width: 80%;
     margin: 0 auto;
+  }
+  .one-piece{
+    border: 2px solid var(--color-cyan);
+  }
+  .bleach{
+    border: 2px solid var(--color-red);
+  }
+  .naruto{
+    border: 2px solid var(--color-or);
   }
 }

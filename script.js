@@ -1,17 +1,15 @@
-const sidenav = document.getElementById("mySidenav");
-const openBtn = document.getElementById("openBtn");
-const closeBtn = document.getElementById("closeBtn");
+const sidenav = document.querySelector("#mySidenav");
+const openNav = document.querySelector("#openBtn");
+const closeNav = document.querySelector("#closeBtn");
 
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
 
 /* Set the width of the side navigation to 250px */
-function openNav() {
+openNav.addEventListener("click", () => {
   sidenav.classList.add("active");
-}
+});
 
 /* Set the width of the side navigation to 0 */
-function closeNav() {
+closeNav.addEventListener("click", () => {
   sidenav.classList.remove("active");
-}
+});
 
