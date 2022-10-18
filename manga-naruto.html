@@ -5,6 +5,10 @@
     <link rel="shortcut icon" href="flag-38938.png" type="image/png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="style-page.css" />
     <title>Manga-Zone</title>
@@ -90,8 +94,10 @@
             dolor repellendus aliquam sint omnis repellat?
           </p>
           <h2>Les Personnages important</h2>
-          <div class="cards">
-            <div class="card">
+          <div class="cards swiper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-wrapper">
+            <div class="card swiper-slide">
               <img src="assets/naruto.jpg" alt="tete-naruto" />
               <div class="card-body">
                 <h2>Naruto</h2>
@@ -101,7 +107,7 @@
                 </p>
               </div>
             </div>
-            <div class="card">
+            <div class="card swiper-slide">
               <img src="assets/sasuke.jpg" alt="tete-sasuke" />
               <div class="card-body">
                 <h2>Sasuke</h2>
@@ -111,7 +117,7 @@
                 </p>
               </div>
             </div>
-            <div class="card">
+            <div class="card swiper-slide">
               <img src="assets/sakura.jpg" alt="tete-sakura" />
               <div class="card-body">
                 <h2>Sakura</h2>
@@ -121,7 +127,7 @@
                 </p>
               </div>
             </div>
-            <div class="card">
+            <div class="card swiper-slide">
               <img src="assets/kakashi.jpg" alt="tete-kakashi" />
               <div class="card-body">
                 <h2>Kakashi</h2>
@@ -132,6 +138,9 @@
               </div>
             </div>
           </div>
+          <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
         </article>
       </section>
     </div>
@@ -147,6 +156,7 @@
       </ul>
       <p class="copyright">© 2022 Jujubis</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

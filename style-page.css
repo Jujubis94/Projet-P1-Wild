@@ -8,8 +8,8 @@
   --color-red: #ff3823;
   --color-or: #fec63d;
   --color-cyan: #4dd7fa;
+  --swiper-theme-color: black;
 }
-
 
 /*  Banniere */
 .banner {
@@ -123,7 +123,7 @@ iframe {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 1rem;
-  padding: 0.2rem 0.2rem;
+  padding: 1rem 1rem;
 }
 
 footer h2 {
@@ -131,10 +131,26 @@ footer h2 {
   margin-top: 0;
 }
 
-.tns-horizontal.tns-subpixel>.tns-item{
-  display: flex;
-  justify-content: center;
+/* Swiper */
+.swiper-horizontal>.swiper-pagination-bullets{
+  bottom: 0;
 }
+
+.swiper{
+  width: 60%;
+}
+
+.swiper-button-prev{
+  display: none;
+}
+.swiper-button-next{
+  display: none;
+}
+
+.swiper-pagination-bullet{
+  padding: 0.4rem;
+}
+
 @media screen and (min-width: 576px) {
   header {
     position: sticky;
@@ -148,8 +164,24 @@ footer h2 {
     border-right: 5px solid var(--fourth-color);
   }
 
+  .swiper{
+    width: 30%;
+    overflow: initial;
+}
+
+  .swiper-button-prev{
+    color: var(--primary-color);
+    display: initial;
+    left: -50px;
+  }
+  .swiper-button-next{
+    color: var(--primary-color);
+    display: initial;
+    right: -50px;
+  }
+
   .swiper-slide{
-    height: 400px;
-    background-color: #fec63d;
+
+    width: 25rem;
   }
 }

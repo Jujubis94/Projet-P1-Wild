@@ -13,3 +13,18 @@ closeNav.addEventListener("click", () => {
   sidenav.classList.remove("active");
 });
 
+var swiper = new Swiper('.swiper', {
+  cssMode: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  mousewheel: true,
+  keyboard: true,
+  //loopedSlides: ,
+});
+

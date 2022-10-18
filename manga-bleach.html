@@ -5,6 +5,10 @@
     <link rel="shortcut icon" href="flag-38938.png" type="image/png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="style-page.css" />
     <title>Manga-Zone</title>
@@ -51,19 +55,8 @@
         <img class="banner" src="assets/Bannière.jpg" alt="Banniere" sizes="" />
       </figure>
       <div class="bloc-page">
-      <section class="Presentation">
-        <h1 class="red">BLEACH</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
-          at quos molestiae accusantium rem fugit obcaecati beatae ratione
-          eligendi exercitationem nam, distinctio pariatur corrupti repellat
-          fuga cum nemo repudiandae a laborum. Unde reprehenderit architecto,
-          dolor repellendus aliquam sint omnis repellat?
-        </p>
-      </section>
-      <section class="contenue">
-        <article>
-          <h2>Qu'est ce que ça raconte ?</h2>
+        <section class="Presentation">
+          <h1 class="red">BLEACH</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
             at quos molestiae accusantium rem fugit obcaecati beatae ratione
@@ -71,69 +64,88 @@
             fuga cum nemo repudiandae a laborum. Unde reprehenderit architecto,
             dolor repellendus aliquam sint omnis repellat?
           </p>
-          <div class="yt">
-            <iframe
-              src="https://www.youtube.com/embed/KV83AZzEk6Y"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <h2>Pourquoi c'est bien ?</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
-            at quos molestiae accusantium rem fugit obcaecati beatae ratione
-            eligendi exercitationem nam, distinctio pariatur corrupti repellat
-            fuga cum nemo repudiandae a laborum. Unde reprehenderit architecto,
-            dolor repellendus aliquam sint omnis repellat?
-          </p>
-          <h2>Les Personnages important</h2>
-          <div class="cards">
-            <div class="card">
-              <img src="assets/ichigo.jpg" alt="tete-ichigo" />
-              <div class="card-body">
-                <h2>Ichigo</h2>
-                <p>
-                  Luffy est le capitaine de l'équipage au chapeau de paille et
-                  désire devenir le roi des pirates
-                </p>
-              </div>
+        </section>
+        <section class="contenue">
+          <article>
+            <h2>Qu'est ce que ça raconte ?</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto, at quos molestiae accusantium rem fugit obcaecati
+              beatae ratione eligendi exercitationem nam, distinctio pariatur
+              corrupti repellat fuga cum nemo repudiandae a laborum. Unde
+              reprehenderit architecto, dolor repellendus aliquam sint omnis
+              repellat?
+            </p>
+            <div class="yt">
+              <iframe
+                src="https://www.youtube.com/embed/KV83AZzEk6Y"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
-            <div class="card">
-              <img src="assets/rukia.jpg" alt="tete-rukia" />
-              <div class="card-body">
-                <h2>Rukia</h2>
-                <p>
-                  Zoro est le bras droit de luffy et souhaite devenir le
-                  meilleur épeiste du monde
-                </p>
+            <h2>Pourquoi c'est bien ?</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto, at quos molestiae accusantium rem fugit obcaecati
+              beatae ratione eligendi exercitationem nam, distinctio pariatur
+              corrupti repellat fuga cum nemo repudiandae a laborum. Unde
+              reprehenderit architecto, dolor repellendus aliquam sint omnis
+              repellat?
+            </p>
+            <h2>Les Personnages important</h2>
+
+            <div class="cards swiper">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-wrapper">
+                <div class="card swiper-slide">
+                  <img src="assets/ichigo.jpg" alt="tete-ichigo" />
+                  <div class="card-body">
+                    <h2>Ichigo</h2>
+                    <p>
+                      Luffy est le capitaine de l'équipage au chapeau de paille
+                      et désire devenir le roi des pirates
+                    </p>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <img src="assets/rukia.jpg" alt="tete-rukia" />
+                  <div class="card-body">
+                    <h2>Rukia</h2>
+                    <p>
+                      Zoro est le bras droit de luffy et souhaite devenir le
+                      meilleur épeiste du monde
+                    </p>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <img src="assets/renji.jpg" alt="tete-renji" />
+                  <div class="card-body">
+                    <h2>Renji</h2>
+                    <p>
+                      Nami est la navigatrice de l'équipage et rêve de
+                      cartographier le monde entier
+                    </p>
+                  </div>
+                </div>
+                <div class="card swiper-slide">
+                  <img src="assets/grimmjow.jpg" alt="tete-grimmjow" />
+                  <div class="card-body">
+                    <h2>Grimmjow</h2>
+                    <p>
+                      Sanji est le cuisinier de l'equipage et rêve de découvrir
+                      all blue
+                    </p>
+                  </div>
+                </div>
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="card">
-              <img src="assets/renji.jpg" alt="tete-renji" />
-              <div class="card-body">
-                <h2>Renji</h2>
-                <p>
-                  Nami est la navigatrice de l'équipage et rêve de cartographier
-                  le monde entier
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="assets/grimmjow.jpg" alt="tete-grimmjow" />
-              <div class="card-body">
-                <h2>Grimmjow</h2>
-                <p>
-                  Sanji est le cuisinier de l'equipage et rêve de découvrir all
-                  blue
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-    </div>
+          </article>
+        </section>
+      </div>
     </main>
     <footer>
       <h2>Liens Utile</h2>
@@ -146,6 +158,7 @@
       </ul>
       <p class="copyright">© 2022 Jujubis</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
