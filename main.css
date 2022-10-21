@@ -191,7 +191,7 @@ footer {
   .sidenav a {
     padding: 0;
     font-size: 22px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     transition: none;
     margin: 0;
   }
@@ -209,22 +209,76 @@ footer {
   /* nav list*/
   nav ul li {
     margin-right: 1rem;
-    background-color: var(--color-cyan);
-    border-radius: 6px;
     padding: 0.2rem 1rem;
   }
 
-  nav ul li:first-child {
-    background-color: var(--color-p);
+  .a::after {
+    display: block;
+    width: 0;
+    content: "";
+    height: 3px;
+    background: #afafaf;
+    transition: width 1.5s ease-in-out;
   }
 
-  nav ul li:nth-child(3) {
-    background-color: var(--color-red);
+  .a:hover::after {
+    background: #afafaf;
+    width: 100%;
   }
 
-  nav ul li:last-child {
-    background-color: var(--color-or);
-    margin-right: 0;
+  .sidenav .a:hover {
+    color: #afafaf;
+  }
+
+  .o::after {
+    display: block;
+    width: 0;
+    content: "";
+    height: 3px;
+    background: #4dd7fa;
+    transition: width 1.5s ease-in-out;
+  }
+
+  .o:hover::after {
+    background: #4dd7fa;
+    width: 100%;
+  }
+  .sidenav .o:hover {
+    color: #4dd7fa;
+  }
+
+  .b::after {
+    display: block;
+    width: 0;
+    content: "";
+    height: 3px;
+    background: #ff3823;
+    transition: width 1.5s ease-in-out;
+  }
+
+  .b:hover::after {
+    background: #ff3823;
+    width: 100%;
+  }
+  .sidenav .b:hover {
+    color: #ff3823;
+  }
+
+  .n::after {
+    display: block;
+    width: 0;
+    content: "";
+    height: 3px;
+    background: #fec63d;
+    transition: width 1.5s ease-in-out;
+  }
+
+  .n:hover::after {
+    background: #fec63d;
+    width: 100%;
+  }
+  .sidenav .n:hover {
+    color: #fec63d;
   }
   footer a {
     font-size: 1rem;
