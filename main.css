@@ -1,5 +1,6 @@
 /* All */
 :root {
+  /*color*/
   --primary-color: black;
   --secondary-color: white;
   --third-color: #7a7a7a;
@@ -10,12 +11,25 @@
   --color-or: #fec63d;
   --color-cyan: #4dd7fa;
   /* color fo header a decider #231b27*/
+  /*font size*/
+  --mobile-title1: 2.5rem;
+  --mobile-title2: 1.8rem;
+  --mobile-title3: 1.25rem;
+  --mobile-p: 1rem;
 }
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   /* border: 1px solid red;*/
+}
+
+svg:not(:root) {
+  overflow: visible;
+}
+
+a{
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); 
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -93,8 +107,8 @@ header {
 
 .logo {
   order: 2;
-  width: 6em;
-  height: 3.5em;
+  width: 6rem;
+  height: 3.5rem;
 }
 
 nav ul li {
@@ -105,27 +119,14 @@ nav ul li {
 }
 
 .toon {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
   order: 3;
 }
 
 /* Footer */
 
-footer h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  margin-left: 0;
-  margin-top: 2em;
-  padding-top: 1rem;
-}
-
 footer li {
   display: flex;
   justify-content: space-around;
-  padding-right: 25px;
 }
 
 footer li a {
@@ -133,12 +134,32 @@ footer li a {
   color: white;
 }
 
+footer a {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+footer img {
+  width: 48px;
+  height: 48px;
+  padding-right: 0.2rem;
+}
+
 .copyright {
   color: white;
   text-align: center;
-  font-size: 1rem;
-  margin-top: 3em;
+  margin-top: 2rem;
   margin-bottom: 0;
+}
+
+footer h3 {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  font-size: var(--mobile-title3);
+  margin-top: 2rem;
 }
 
 footer {
@@ -154,7 +175,6 @@ footer {
   }
   .toon {
     order: 3;
-    margin-right: 1rem;
   }
 
   #openBtn {
@@ -205,5 +225,14 @@ footer {
   nav ul li:last-child {
     background-color: var(--color-or);
     margin-right: 0;
+  }
+  footer a {
+    font-size: 1rem;
+  }
+
+  footer img {
+    width: 52px;
+    height: 52px;
+    padding-right: 0.5rem;
   }
 }
