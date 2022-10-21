@@ -1,4 +1,5 @@
 /* All */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   /*color*/
   --primary-color: black;
@@ -32,11 +33,9 @@ a{
   -webkit-tap-highlight-color: rgba(255, 0, 0, 0); 
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 body {
   background-color: var(--primary-color);
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 /* Header */
 

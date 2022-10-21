@@ -62,7 +62,7 @@ p {
 
 .yt {
   position: relative;
-  width: 80%;
+  width: 90%;
   overflow: hidden;
   padding-top: 50%;
   margin: 3rem auto;
@@ -88,18 +88,16 @@ iframe {
 .card {
   background-color: black;
   border-radius: 10px;
-  width: 200px;
   margin: 20px;
   display: flex;
   flex-direction: column;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .card img {
-  width: 50%;
-  height: 100px;
+  width: 60%;
+  height: 140px;
   border-radius: 30%;
   margin: 0 auto;
-  object-fit: content;
   margin-top: 1rem;
 }
 
@@ -134,7 +132,7 @@ iframe {
 }
 
 .swiper {
-  width: 60%;
+  width: 70%;
 }
 
 .swiper-button-prev {
@@ -171,7 +169,7 @@ iframe {
   }
 
   .swiper {
-    width: 33%;
+    width: 30%;
     overflow: initial;
   }
 
