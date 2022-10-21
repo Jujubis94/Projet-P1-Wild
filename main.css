@@ -211,7 +211,7 @@ footer {
     margin-right: 1rem;
     padding: 0.2rem 1rem;
   }
-
+/* animation nav bar */
   .a::after {
     display: block;
     width: 0;

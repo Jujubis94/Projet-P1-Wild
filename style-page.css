@@ -1,7 +1,12 @@
 :root {
   --swiper-theme-color: black;
 }
-
+.primary-img{
+  width: 92%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+}
 /*  Banniere */
 .banner {
   display: none;
