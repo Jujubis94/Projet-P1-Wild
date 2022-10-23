@@ -6,6 +6,7 @@
   height: auto;
   margin: 2rem auto;
   display: block;
+  border-radius: 10px;
 }
 /*  Banniere */
 .banner {
@@ -48,9 +49,7 @@ h2 {
   text-align: center;
   margin-top: 3rem;
 }
-footer h3{
-  margin-top: 2rem;
-}
+
 p {
   color: var(--primary-color);
   margin-left: 1rem;
@@ -66,6 +65,7 @@ p {
   overflow: hidden;
   padding-top: 50%;
   margin: 3rem auto;
+  border-radius: 10px;
 }
 
 iframe {
@@ -113,6 +113,7 @@ iframe {
   background-color: var(--third-color);
   margin-bottom: 1rem;
   padding: 0.2rem 0;
+  font-size: var(--mobile-title3);
 }
 
 .card p {
@@ -123,6 +124,10 @@ iframe {
   margin: 0 auto;
   margin-bottom: 1rem;
   padding: 1rem 1rem;
+}
+
+footer h3{
+  margin-top: 2rem;
 }
 
 
@@ -165,11 +170,10 @@ iframe {
 
   .yt {
     width: 90%;
-    border-radius: 10px;
   }
 
   .swiper {
-    width: 30%;
+    width: 35%;
     overflow: initial;
   }
 
@@ -188,5 +192,11 @@ iframe {
   }
   .bloc-page{
     padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 860px) {
+  .swiper{
+    width: 60%;
   }
 }

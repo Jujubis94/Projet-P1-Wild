@@ -14,7 +14,7 @@
   /* color fo header a decider #231b27*/
   /*font size*/
   --mobile-title1: 2.5rem;
-  --mobile-title2: 1.8rem;
+  --mobile-title2: 1.75rem;
   --mobile-title3: 1.25rem;
   --mobile-p: 1rem;
 }
@@ -23,10 +23,6 @@
   padding: 0;
   margin: 0;
   /* border: 1px solid red;*/
-}
-
-svg:not(:root) {
-  overflow: visible;
 }
 
 a{
@@ -79,8 +75,20 @@ header {
   cursor: pointer;
 }
 
-.sidenav a:hover {
-  color: rgb(255, 197, 1);
+.sidenav .a:hover {
+  color: #afafaf;
+}
+
+.sidenav .o:hover {
+  color: #4dd7fa;
+}
+
+.sidenav .b:hover {
+  color: #ff3823;
+}
+
+.sidenav .n:hover {
+  color: #fec63d;
 }
 
 /* Active class */
@@ -156,13 +164,26 @@ footer h3 {
   color: var(--secondary-color);
   text-align: center;
   margin-bottom: 2rem;
-  padding-top: 1rem;
-  font-size: var(--mobile-title3);
+  padding-top: 0.5rem;
+  font-size: 1.4rem;
   margin-top: 2rem;
 }
 
 footer {
   background-color: var(--fourth-color);
+}
+
+.scroll_to_top {
+  position: fixed;
+  bottom: 1rem;
+  right: -215px;
+  z-index: 10;
+}
+.scroll_to_top img {
+  width: 35px;
+}
+.visible {
+  right: 1rem;
 }
 
 @media screen and (min-width: 576px) {
@@ -217,16 +238,12 @@ footer {
     content: "";
     height: 3px;
     background: #afafaf;
-    transition: width 1.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
   }
 
   .a:hover::after {
     background: #afafaf;
     width: 100%;
-  }
-
-  .sidenav .a:hover {
-    color: #afafaf;
   }
 
   .o::after {
@@ -235,15 +252,12 @@ footer {
     content: "";
     height: 3px;
     background: #4dd7fa;
-    transition: width 1.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
   }
 
   .o:hover::after {
     background: #4dd7fa;
     width: 100%;
-  }
-  .sidenav .o:hover {
-    color: #4dd7fa;
   }
 
   .b::after {
@@ -252,15 +266,12 @@ footer {
     content: "";
     height: 3px;
     background: #ff3823;
-    transition: width 1.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
   }
 
   .b:hover::after {
     background: #ff3823;
     width: 100%;
-  }
-  .sidenav .b:hover {
-    color: #ff3823;
   }
 
   .n::after {
@@ -269,16 +280,14 @@ footer {
     content: "";
     height: 3px;
     background: #fec63d;
-    transition: width 1.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
   }
 
   .n:hover::after {
     background: #fec63d;
     width: 100%;
   }
-  .sidenav .n:hover {
-    color: #fec63d;
-  }
+
   footer a {
     font-size: 1rem;
   }
@@ -288,4 +297,16 @@ footer {
     height: 52px;
     padding-right: 0.5rem;
   }
+  .scroll_to_top {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 740px) {
+  nav ul li{
+    padding: 0;
+  }
+  .sidenav a {
+    font-size: 18px;
+}
 }
