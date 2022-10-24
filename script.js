@@ -1,73 +1,34 @@
 
+class OneP {
+  constructor(name, picture, texte) {
+      this.name = name,
+      this.picture = picture,
+      this.texte = texte
+  }
+}
 
-const OneP = [
-  {
-    name: "Luffy",
-    picture: "assets/luffy.jpg",
-    texte: "Luffy est le protagoniste principal de l'oeuvre mais aussi capitaine de l'équipage au chapeau de paille.",
-  },
-  {
-    name: "Zorro",
-    picture: "assets/zoro.jpeg",
-    texte: "Zoro est le bras droit de luffy et souhaite devenir le meilleur épéiste du monde.",
-  },
-  {
-    name: "Nami",
-    picture: "assets/nami.jpg",
-    texte: "Nami est la navigatrice de l'équipage et rêve de cartographier le monde entier.",
-  },
-  {
-    name: "Sanji",
-    picture: "assets/sanji.jpg",
-    texte: `Sanji est le cuisinier de l'équipage et rêve de découvrir all blue "la mer légendaire".`,
-  },
-];
+let Onepe = []; // nouveau tableau contenant l'objet ci-dessus
+let Ble = []; // nouveau tableau contenant l'objet ci-dessus
+let Nar = []; // nouveau tableau contenant l'objet ci-dessus
 
-const Ble = [
-  {
-    name: "Ichigo",
-    picture: "assets/ichigo.jpg",
-    texte: "Ichigo kurosaki est le personnage principal et devient shinigami remplacant.",
-  },
-  {
-    name: "Rukia",
-    picture: "assets/rukia.jpg",
-    texte: "Rukia kuchiki est la Shinigami qui permit à Ichigo d'avoir ses pouvoirs de Shinigami.",
-  },
-  {
-    name: "Renji",
-    picture: "assets/renji.jpg",
-    texte: "Renji Abarai est le lieutenant de la 6ème Division du Gotei 13 du Capitaine Byakuya Kuchiki.",
-  },
-  {
-    name: "Grimmjow",
-    picture: "assets/grimmjow.jpg",
-    texte: "Grimmjow Jaggerjack est l'Espada numéro 6 et l’un des 3 ennemis principaux d’Ichigo.",
-  },
-];
+/* add one-piece */
+Onepe.push(new OneP ("Luffy", "assets/luffy.jpg", "Luffy est le protagoniste principal de l'oeuvre mais aussi capitaine de l'équipage au chapeau de paille."));
+Onepe.push(new OneP ("Zorro", "assets/zoro.jpeg", "Zoro est le bras droit de luffy et souhaite devenir le meilleur épéiste du monde."));
+Onepe.push(new OneP ("Nami", "assets/nami.jpg", "Nami est la navigatrice de l'équipage et rêve de cartographier le monde entier.",));
+Onepe.push(new OneP ("Sanji", "assets/sanji.jpg", `Sanji est le cuisinier de l'équipage et rêve de découvrir all blue "la mer légendaire".`));
 
-const Nar = [
-  {
-    name: "Naruto",
-    picture: "assets/naruto.jpg",
-    texte: "Naruto Uzumaki est le personnage principal et un ninja du village caché de Konoha.",
-  },
-  {
-    name: "Sasuke",
-    picture: "assets/sasuke.jpg",
-    texte: "Sasuke Uchiwa fait partie de l'équipe 7, est l'ami mais aussi le plus grand rival de naruto.",
-  },
-  {
-    name: "Sakura",
-    picture: "assets/sakura.jpg",
-    texte: "Sakura Haruno fait partie de l'équipe 7, c'est la plus doué de l'équipe au niveau scolaire.",
-  },
-  {
-    name: "Kakashi",
-    picture: "assets/kakashi.jpg",
-    texte: "Kakashi Hatake est le chef de l'équipe 7, il a le rôle de mentor et d'instructeur.",
-  },
-];
+/* add bleach card */
+Ble.push(new OneP ("Ichigo", "assets/ichigo.jpg", "Ichigo kurosaki est le personnage principal et devient shinigami remplacant."));
+Ble.push(new OneP ("Rikia", "assets/rukia.jpg", "Rukia kuchiki est la Shinigami qui permit à Ichigo d'avoir ses pouvoirs de Shinigami."));
+Ble.push(new OneP ("Renji", "assets/renji.jpg", "Renji Abarai est le lieutenant de la 6ème Division du Gotei 13 du Capitaine Byakuya Kuchiki."));
+Ble.push(new OneP ("Grimmjow", "assets/grimmjow.jpg", "Grimmjow Jaggerjack est l'Espada numéro 6 et l’un des 3 ennemis principaux d’Ichigo."));
+
+/* add naruto card */
+Nar.push(new OneP ("Naruto", "assets/naruto.jpg", "Naruto Uzumaki est le personnage principal et un ninja du village caché de Konoha."));
+Nar.push(new OneP ("Sasuke", "assets/sasuke.jpg", "Sasuke Uchiwa fait partie de l'équipe 7, est l'ami mais aussi le plus grand rival de naruto."));
+Nar.push(new OneP ("Sakura", "assets/sakura.jpg", "Sakura Haruno fait partie de l'équipe 7, c'est la plus doué de l'équipe au niveau scolaire."));
+Nar.push(new OneP ("Kakashi", "assets/kakashi.jpg", "Kakashi Hatake est le chef de l'équipe 7, il a le rôle de mentor et d'instructeur."));
+
 
 const wrapper = document.querySelector(".swiper-wrapper");
 
@@ -110,7 +71,7 @@ for (let i = 0; i < tab.length; i++) {
 }
 
 if(document.querySelector(".cardOnePiece")){
-  createSliderCard(OneP)
+  createSliderCard(Onepe)
 }
 if(document.querySelector(".cardBleach")){
   createSliderCard(Ble)
