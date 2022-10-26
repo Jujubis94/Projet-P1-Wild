@@ -8,7 +8,9 @@ document.addEventListener("scroll", () => {
   }
   // check that button is not lower than footer.
   let footerElement = document.getElementById("footer");
+    //information about the size of an element and its position relative to the viewport.
   let footerElementRect = footerElement.getBoundingClientRect();
+  //distance between element and margin + height without margin
   let btntopPositionBottom = btntop.offsetTop + btntop.offsetHeight;
   if (footerElementRect.y < btntopPositionBottom) {
     // if button is lower than footer.
@@ -178,14 +180,15 @@ closeNav.addEventListener("click", () => {
 
 /*config swiper*/
 if (document.querySelector(".swiper")) {
-let swiper = new Swiper(".swiper", {
-  cssMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-})};
+  let swiper = new Swiper(".swiper", {
+    cssMode: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}

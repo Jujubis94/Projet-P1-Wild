@@ -139,10 +139,7 @@ footer h3 {
   width: 70%;
 }
 
-.swiper-button-prev {
-  display: none;
-}
-.swiper-button-next {
+.swiper-button-prev, .swiper-button-next {
   display: none;
 }
 
