@@ -177,6 +177,7 @@ closeNav.addEventListener("click", () => {
 });
 
 /*config swiper*/
+if (document.querySelector(".swiper")) {
 let swiper = new Swiper(".swiper", {
   cssMode: true,
   navigation: {
@@ -187,4 +188,4 @@ let swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-});
+})};
