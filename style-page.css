@@ -1,7 +1,7 @@
 :root {
   --swiper-theme-color: black;
 }
-.primary-img{
+.primary-img {
   width: 92%;
   height: auto;
   margin: 2rem auto;
@@ -126,10 +126,9 @@ iframe {
   padding: 1rem 1rem;
 }
 
-footer h3{
+footer h3 {
   margin-top: 2rem;
 }
-
 
 /* Swiper */
 .swiper-horizontal > .swiper-pagination-bullets {
@@ -191,13 +190,13 @@ footer h3{
   footer h3 {
     margin-top: 0;
   }
-  .bloc-page{
+  .bloc-page {
     padding-bottom: 1.5rem;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 860px) {
-  .swiper{
+  .swiper {
     width: 60%;
   }
 }
