@@ -1,5 +1,26 @@
+/* btnScroll*/
+const btntop = document.querySelector(".scroll_to_top");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    btntop.classList.add("visible");
+  } else {
+    btntop.classList.remove("visible");
+  }
+  // check that button is not lower than footer.
+let footerElement = document.getElementById('footer');
+let footerElementRect = footerElement.getBoundingClientRect();
+let btntopPositionBottom = btntop.offsetTop + btntop.offsetHeight;
+if (footerElementRect.y < btntopPositionBottom) {
+  // if button is lower than footer.
+  btntop.style.opacity = "0";}
+  else{
+    btntop.style.opacity = "1";
+  }
+}
+);
 
-class OneP {
+/* create character*/
+class Character {
   constructor(name, picture, texte) {
       this.name = name,
       this.picture = picture,
@@ -7,29 +28,29 @@ class OneP {
   }
 }
 
-let Onepe = []; // nouveau tableau contenant l'objet ci-dessus
-let Ble = []; // nouveau tableau contenant l'objet ci-dessus
-let Nar = []; // nouveau tableau contenant l'objet ci-dessus
+let One = []; // nouveau tableau contenant les card one-piece
+let Ble = []; // nouveau tableau contenant les card bleach
+let Nar = []; // nouveau tableau contenant les card naruto
 
 /* add one-piece */
-Onepe.push(new OneP ("Luffy", "assets/luffy.jpg", "Luffy est le protagoniste principal de l'oeuvre mais aussi capitaine de l'équipage au chapeau de paille."));
-Onepe.push(new OneP ("Zorro", "assets/zoro.jpeg", "Zoro est le bras droit de luffy et souhaite devenir le meilleur épéiste du monde."));
-Onepe.push(new OneP ("Nami", "assets/nami.jpg", "Nami est la navigatrice de l'équipage et rêve de cartographier le monde entier.",));
-Onepe.push(new OneP ("Sanji", "assets/sanji.jpg", `Sanji est le cuisinier de l'équipage et rêve de découvrir all blue "la mer légendaire".`));
+One.push(new Character ("Luffy", "assets/luffy.jpg", "Luffy est le protagoniste principal de l'oeuvre mais aussi capitaine de l'équipage au chapeau de paille."));
+One.push(new Character ("Zorro", "assets/zoro.jpeg", "Zoro est le bras droit de luffy et souhaite devenir le meilleur épéiste du monde."));
+One.push(new Character ("Nami", "assets/nami.jpg", "Nami est la navigatrice de l'équipage et rêve de cartographier le monde entier.",));
+One.push(new Character ("Sanji", "assets/sanji.jpg", `Sanji est le cuisinier de l'équipage et rêve de découvrir all blue "la mer légendaire".`));
 
 /* add bleach card */
-Ble.push(new OneP ("Ichigo", "assets/ichigo.jpg", "Ichigo kurosaki est le personnage principal et devient shinigami remplacant."));
-Ble.push(new OneP ("Rikia", "assets/rukia.jpg", "Rukia kuchiki est la Shinigami qui permit à Ichigo d'avoir ses pouvoirs de Shinigami."));
-Ble.push(new OneP ("Renji", "assets/renji.jpg", "Renji Abarai est le lieutenant de la 6ème Division du Gotei 13 du Capitaine Byakuya Kuchiki."));
-Ble.push(new OneP ("Grimmjow", "assets/grimmjow.jpg", "Grimmjow Jaggerjack est l'Espada numéro 6 et l’un des 3 ennemis principaux d’Ichigo."));
+Ble.push(new Character ("Ichigo", "assets/ichigo.jpg", "Ichigo kurosaki est le personnage principal et devient shinigami remplacant."));
+Ble.push(new Character ("Rukia", "assets/rukia.jpg", "Rukia kuchiki est la Shinigami qui permit à Ichigo d'avoir ses pouvoirs de Shinigami."));
+Ble.push(new Character ("Renji", "assets/renji.jpg", "Renji Abarai est le lieutenant de la 6ème Division du Gotei 13 du Capitaine Byakuya Kuchiki."));
+Ble.push(new Character ("Grimmjow", "assets/grimmjow.jpg", "Grimmjow Jaggerjack est l'Espada numéro 6 et l’un des 3 ennemis principaux d’Ichigo."));
 
 /* add naruto card */
-Nar.push(new OneP ("Naruto", "assets/naruto.jpg", "Naruto Uzumaki est le personnage principal et un ninja du village caché de Konoha."));
-Nar.push(new OneP ("Sasuke", "assets/sasuke.jpg", "Sasuke Uchiwa fait partie de l'équipe 7, est l'ami mais aussi le plus grand rival de naruto."));
-Nar.push(new OneP ("Sakura", "assets/sakura.jpg", "Sakura Haruno fait partie de l'équipe 7, c'est la plus doué de l'équipe au niveau scolaire."));
-Nar.push(new OneP ("Kakashi", "assets/kakashi.jpg", "Kakashi Hatake est le chef de l'équipe 7, il a le rôle de mentor et d'instructeur."));
+Nar.push(new Character ("Naruto", "assets/naruto.jpg", "Naruto Uzumaki est le personnage principal et un ninja du village caché de Konoha."));
+Nar.push(new Character ("Sasuke", "assets/sasuke.jpg", "Sasuke Uchiwa fait partie de l'équipe 7, est l'ami mais aussi le plus grand rival de naruto."));
+Nar.push(new Character ("Sakura", "assets/sakura.jpg", "Sakura Haruno fait partie de l'équipe 7, c'est la plus doué de l'équipe au niveau scolaire."));
+Nar.push(new Character ("Kakashi", "assets/kakashi.jpg", "Kakashi Hatake est le chef de l'équipe 7, il a le rôle de mentor et d'instructeur."));
 
-
+/*JS for create card*/
 const wrapper = document.querySelector(".swiper-wrapper");
 
 const createCard = (title, imageUrl, text) => {
@@ -60,7 +81,7 @@ const createCard = (title, imageUrl, text) => {
 };
 
 
-
+/*create card*/
 const createSliderCard = (tab) =>{
 for (let i = 0; i < tab.length; i++) {
   createCard(
@@ -71,7 +92,7 @@ for (let i = 0; i < tab.length; i++) {
 }
 
 if(document.querySelector(".cardOnePiece")){
-  createSliderCard(Onepe)
+  createSliderCard(One)
 }
 if(document.querySelector(".cardBleach")){
   createSliderCard(Ble)
@@ -95,16 +116,7 @@ closeNav.addEventListener("click", () => {
   sidenav.classList.remove("active");
 });
 
-/* btnScroll*/
-const btntop = document.querySelector(".scroll_to_top");
-document.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    btntop.classList.add("visible");
-  } else {
-    btntop.classList.remove("visible");
-  }
-});
-
+/*config swiper*/
 let swiper = new Swiper(".swiper", {
   cssMode: true,
   navigation: {
@@ -116,7 +128,3 @@ let swiper = new Swiper(".swiper", {
     clickable: true,
   },
 });
-
-
-
-
