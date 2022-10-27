@@ -1,5 +1,6 @@
 /* btnScroll*/
 const btntop = document.querySelector(".scroll_to_top");
+if (document.querySelector(".scroll_to_top")){
 document.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     btntop.classList.add("visible");
@@ -18,7 +19,7 @@ document.addEventListener("scroll", () => {
   } else {
     btntop.style.visibility = "visible";
   }
-});
+})};
 
 /* create character*/
 class Character {
@@ -182,6 +183,7 @@ closeNav.addEventListener("click", () => {
 if (document.querySelector(".swiper")) {
   let swiper = new Swiper(".swiper", {
     cssMode: true,
+    preventInteractionOnTransition : true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

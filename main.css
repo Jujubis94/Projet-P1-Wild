@@ -125,6 +125,7 @@ nav ul li {
 
 .toon {
   order: 3;
+  display: flex;
 }
 
 /* Footer */
@@ -184,20 +185,16 @@ footer {
 }
 
 @media screen and (min-width: 576px) {
-  .sidenav {
-    order: 2;
-  }
   .logo {
     order: 1;
-  }
-  .toon {
-    order: 3;
   }
 
   #openBtn {
     display: none;
   }
   .sidenav {
+    order: 2;
+    font-size: 0;
     background-color: initial;
     padding-top: 0;
     height: auto;
